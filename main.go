@@ -1,11 +1,9 @@
 package main
 
 import (
-	"github.com/edwardsuwirya/wmbTableMgmt/config"
+	"github.com/edwardsuwirya/wmbTableMgmt/api"
 )
 
 func main() {
-	appConfig := config.NewConfig()
-	appConfig.RunMigration()
-	appConfig.StartEngine()
+	api.NewApiServer().Run()
 }
